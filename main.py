@@ -17,4 +17,6 @@ def Encrypt(shift, text):
         cipher_text += new_letter
     print(f"the Encoded text is:\n {cipher_text}")
 
+def Decrypt(shift, text)
+
 Encrypt(shift = key, text = massage)
