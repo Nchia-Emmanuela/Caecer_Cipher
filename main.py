@@ -3,8 +3,18 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f',
 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
 'y', 'z']
 key = int(input("Enter your key: \n"))
-choice = input("Type 'Encode' to Encrype or 'Decode' to Decrypt: \n")
-text = input("Enter message: \n")
+dirrection = input("Type 'Encode' to Encrype or 'Decode' to Decrypt: \n")
+massage = input("Enter message: \n")
+alphabet_len = len(alphabet)
 
-def Encrpyt(key, text):
-    
+
+def Encrypt(shift, text):
+    cipher_text = ''
+    for letter in massage:
+        position = alphabet.index(letter)
+        new_position = (position + key) % 26
+        new_letter = alphabet[new_position]
+        cipher_text += new_letter
+    print(f"the Encoded text is:\n {cipher_text}")
+
+Encrypt(shift = key, text = massage)
